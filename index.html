@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aim Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>🎯 My Daily Aim Tracker</h1>
+
+    <!-- Quote Section -->
+    <div class="card quote-card">
+      <h2>🌟 Motivation</h2>
+      <p id="quoteText"></p>
+      <button onclick="newQuote()">New Quote</button>
+    </div>
+
+    <!-- Aim Section -->
+    <div class="card">
+      <h2>Set Today’s Aim</h2>
+      <input type="text" id="aimInput" placeholder="Enter your aim...">
+      <button onclick="setAim()">Set Aim</button>
+      <p id="currentAim"></p>
+    </div>
+
+    <!-- Task Section -->
+    <div class="card">
+      <h2>Log Your Task</h2>
+      <input type="text" id="taskInput" placeholder="Enter task...">
+      <select id="taskType">
+        <option value="good">✅ Good</option>
+        <option value="miss">⚠️ Missed</option>
+        <option value="bad">❌ Bad Habit</option>
+      </select>
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <!-- History Section -->
+    <div class="card">
+      <h2>Daily History</h2>
+      <ul id="taskList"></ul>
+    </div>
+
+    <!-- Graph Section -->
+    <div class="card">
+      <h2>Progress Graph</h2>
+      <canvas id="progressChart"></canvas>
+    </div>
+
+    <div class="card">
+      <h2>Good vs Bad</h2>
+      <canvas id="pieChart"></canvas>
+    </div>
+
+    <div class="card">
+      <h2>Weekly Summary</h2>
+      <canvas id="weeklyChart"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
